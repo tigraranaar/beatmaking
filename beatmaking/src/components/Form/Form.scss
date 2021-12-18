@@ -1,0 +1,43 @@
+@import "../../assets/styles/media.scss";
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 54px 0;
+
+  input,
+  textarea {
+    padding: 15px 5px;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    flex: 0 0 31%;
+
+    @include mobile {
+      flex: 0 0 100%;
+    }
+  }
+
+  .form__message {
+    flex: 0 0 100%;
+  }
+
+  .form__button {
+    margin: 0 auto;
+    background: transparent;
+    border: 1px solid #ffffff;
+    padding: 10px 35px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

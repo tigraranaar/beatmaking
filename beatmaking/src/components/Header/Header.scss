@@ -1,0 +1,52 @@
+@import "../../assets/styles/media.scss";
+
+%centered {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: transparent;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  .header__wrapper {
+    @extend %centered;
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include desktop {
+      max-width: 88vw;
+    }
+  }
+  &__logo {
+    width: 125px;
+    filter: invert(100%);
+  }
+
+  &__menu {
+    @extend %centered;
+
+    gap: 0 30px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+  }
+}
+
+.header-dark {
+  background-color: #1d1d1d;
+}

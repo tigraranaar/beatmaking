@@ -1,0 +1,35 @@
+@import "../../assets/styles/media.scss";
+
+$font-size-title: 30px;
+$color-purple-light: #e1736d;
+$color-grey-light: #808080;
+
+.titlebox {
+  text-align: center;
+  font-size: $font-size-title;
+
+  &__title {
+    font-size: 1em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $color-purple-light;
+
+    @include mobile {
+      font-size: 0.5em;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 0.2em;
+    font-size: 0.6em;
+    color: $color-grey-light;
+
+    @include mobile {
+      font-size: 0.5em;
+    }
+  }
+}
+
+.titlebox-large {
+  font-size: calc($font-size-title * 1.5);
+}

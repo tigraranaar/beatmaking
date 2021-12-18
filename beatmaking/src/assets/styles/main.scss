@@ -1,0 +1,41 @@
+@import "./media.scss";
+@import "./fonts.scss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Vermin", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: normal;
+  background-color: #1d1d1d;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 88vw;
+  }
+}
