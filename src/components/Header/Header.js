@@ -15,6 +15,8 @@ function Header(props) {
 
   let handleModal = () => {
     setModalToggle(!modalToggle);
+    
+    document.body.style.overflow = (modalToggle)? 'visible' : 'hidden';
   };
 
   return (
