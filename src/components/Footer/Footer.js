@@ -7,7 +7,9 @@ function Footer() {
       <div className="footer__left">
         <img className="footer__logo" src={logo} alt="logo"/>
         <p className="footer__text">
-          Copyright ©2021 All rights reserved | Design by Tigraranaar
+          Copyright ©2021 All rights reserved 
+          <br></br>
+          Design by Tigraranaar
         </p>
       </div>
       <div className="footer__right">

@@ -26,20 +26,90 @@
     @include desktop {
       max-width: 88vw;
     }
+
+    @include mobile {
+      align-items: stretch;
+    }
   }
+
   &__logo {
     width: 125px;
     filter: invert(100%);
+  }
+
+  &__burger {
+    width: 30px;
+    display: none;
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 10;
+
+    @include mobile {
+      display: block;
+    }
+
+    &:before {
+      background: #000;
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 0;
+      width: 30px;
+      height: 5px;
+    }
+    &:after {
+      background: #000;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 35px;
+      width: 30px;
+      height: 5px;
+    }
+  }
+
+  &__burger-close {
+    &::after,
+    &::before {
+      top: 25px;
+      transform: rotate(45deg);
+      animation: buttonclose 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
   &__menu {
     @extend %centered;
 
     gap: 0 30px;
+    transition: all 0.4s linear;
 
     @include mobile {
       display: none;
     }
+  }
+
+  &__menu-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px 0;
+    overflow: hidden;
+    background-color: #1d1d1d;
+    will-change: contents;
+    animation: menuopen 0.5s;
   }
 
   &__link {
@@ -49,4 +119,22 @@
 
 .header-dark {
   background-color: #1d1d1d;
+}
+
+@keyframes menuopen {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonclose {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }

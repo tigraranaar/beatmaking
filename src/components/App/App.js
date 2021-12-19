@@ -9,35 +9,35 @@ import Form from '../Form/Form';
 import Slide from '../Slide/Slide';
 import './App.scss';
 
-const card1 = {
-  imageURL: cardImage1,
-  price: 19,
-  features: [
-    "Untagged Mp3",
-    "Instant Delivery",
-    "Must Credit 'PROD. BY TIGRARANAAR'"
-  ]
-}
-
-const card2 = {
-  imageURL: cardImage2,
-  price: 39,
-  features: [
-    "Untagged Mp3 + Wav",
-    "Instant Delivery",
-    "Must Credit 'PROD. BY TIGRARANAAR'"
-  ]
-}
-
-const card3 = {
-  imageURL: cardImage3,
-  price: 55,
-  features: [
-    "Untagged Mp3 + Wav + Stems",
-    "Instant Delivery",
-    "Exclusive Rights"
-  ]
-}
+const cards = [
+  {
+    imageURL: cardImage1,
+    price: 19,
+    features: [
+      "Untagged Mp3",
+      "Instant Delivery",
+      "Must Credit 'PROD. BY TIGRARANAAR'"
+    ]
+  }, 
+  {
+    imageURL: cardImage2,
+    price: 39,
+    features: [
+      "Untagged Mp3 + Wav",
+      "Instant Delivery",
+      "Must Credit 'PROD. BY TIGRARANAAR'"
+    ]
+  },
+  {
+    imageURL: cardImage3,
+    price: 55,
+    features: [
+      "Untagged Mp3 + Wav + Stems",
+      "Instant Delivery",
+      "Exclusive Rights"
+    ]
+  }
+];
 
 function App() {
   return (
@@ -53,9 +53,9 @@ function App() {
         <div id="buy"></div>
         <Title title="info" subtitle="licensing" />
         <div className="cards">
-          <Card {...card1} />
-          <Card {...card2} />
-          <Card {...card3} />
+          {cards.map((card) => (
+            <Card key={card.imageURL + `id`} {...card} />
+          ))}
         </div>
 
         <Title title="INSTRUMENTAL" subtitle="How To Order" />

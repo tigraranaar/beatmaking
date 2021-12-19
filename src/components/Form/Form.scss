@@ -5,11 +5,11 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 54px 0;
+  gap: 55px 0;
 
   input,
   textarea {
-    padding: 15px 5px;
+    padding: 10px 5px;
     outline: none;
     background: transparent;
     color: #fff;
@@ -28,11 +28,12 @@
 
   .form__button {
     margin: 0 auto;
+    padding: 10px 35px;
     background: transparent;
     border: 1px solid #ffffff;
-    padding: 10px 35px;
     color: #ffffff;
     cursor: pointer;
+    outline: none;
     transition: all 0.2s ease-in;
 
     &:hover {

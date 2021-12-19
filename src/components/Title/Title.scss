@@ -31,5 +31,11 @@ $color-grey-light: #808080;
 }
 
 .titlebox-large {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: calc($font-size-title * 1.5);
+  text-align: center;
+  z-index: 1;
 }
